@@ -12,14 +12,14 @@ O cilco de vida está dividido, para está atividade, da seguinte forma
 - **Projeto lógico**
     - **modelagem conceitual de dados**
     - **integração da visão**
-    - **tranformação do modelo conceitual em tabelas SQL**    
+    - **tranformação do modelo conceitual em tabelas SQL**  
     - **normalização de tabelas**
 - **Projeto físico**
 - **Implementação, monitoração e modificação do banco de dados**
 
 ## Regras
 
-Cada equipe deverá ter, em cada faze do ciclo de vida, um lider e seus liderados. Não será possível que um integrante da equipe expermente ser lider em mais de uma etapa.
+Cada equipe deverá ter, em cada faze do ciclo de vida, um lider e seus liderados. Não será possível que um integrante da equipe expermente ser lider em mais de uma etapa. Máximo de 6 pessoas por equipe.
 
 A etapa **Projeto lógico** será distribuida para dois lideres:
 
@@ -45,7 +45,7 @@ O relatório deve seguir o padrão para cada etapa do ciclo de vida, a saber:
 
 - **Projeto lógico** a partir da **tranformação do modelo conceitual em tabelas SQL** até a **normalização de tabelas**. criar uma apresentação que fundamenta as tabelas obtidas a partir modelo conceitual elaborado com, pelo menos, 3 formas normais.
 
-- **Projeto físico**. criar uma apresentação que fundamenta essa etapa com o objetivo de dar maior precisão a partir da desconstrução/análise crítica do modelo conceitual elaborado prevendo qual o melhor SGBD para tal etapa e porque e seus índices.
+- **Projeto físico**. criar uma apresentação que fundamenta essa etapa com o objetivo de dar maior precisão a partir da desconstrução/análise crítica do modelo conceitual elaborado, prevendo qual o melhor SGBD para tal etapa e porque e, ainda, seus índices.
 
 - **Implementação, monitoração e modificação do banco de dados**. demonstar a funcionalidade do banco de dados elaborado a fim de atender a análise de requisitos elicitada na etapa 1 do ciclo de vida do banco de dados.
 
@@ -56,4 +56,4 @@ Para a obtenção dos pontos a equipe terá que entregar parcelas do projeto que
 Caso alguma parcial do trabalho não seja entregue na data acordada a equipe receberá nota zero referente a parcela.
 
 
-
+[Localize-se: lista das aulas](https://github.com/tmenegaz/db_dendezeiros/blob/master/assunto/lista.md#lista-de-aulas)

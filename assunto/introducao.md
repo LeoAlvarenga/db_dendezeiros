@@ -29,7 +29,7 @@ A linguagem SQL possui divisões, a saber:
 
 Ademais, afim de atender aos objetivos de ensino e aprendizagem apresentados na ementa, aqui serão adotadas as versões SQL-99 e SQL-92. A partir da SQL-99 a linguagem SQL incorpora comandos procedurais<sup>[7](#myfootnote7)</sup> como o *BEGIN*, *IF*, *funções* e *procedimentos* que já existiam como extensões da linguagem. Essas duas revisões, padrão ISO-ANSI, são facilmente encontradas no mercado de desenvolvimento de sistemas sem, portanto, nenhum prejuizo para o aluno no decorrer do curso técnico de informática.
 
-Para falarmos de banco de dados, SQL, SGBDR e sistemas de banco de dados relacionais (*SBDR*) usamos varias vezes a palavra "**dado**", sem, contudo, defini-la neste contexto da Tecnologia da Informação - *TI*<sup>[8](#myfootnote8)</sup>. Agora vejamos o que é o dado o que está em seu entorno.
+Para falarmos de banco de dados, SQL, SGBDR e sistemas de banco de dados relacionais (*SBDR*) usamos varias vezes a palavra "**dado**", sem, contudo, defini-la neste contexto da Tecnologia da Informação - *TI*<sup>[8](#myfootnote8)</sup>. Agora vejamos o que é o dado e o que está em seu entorno.
 
 O dado pode ser abstraido como a unidade básica da informação. Sendo um componente básico de um arquivo em um sistema de arquivos é o *item de dados* a menor unidade carregada de significado no mundo real. Não obstante a isso, pode-se apresentar como exemplo *nome*, *sobrenome*, *telefone*, *número de identificação*, *sigla de partido político* etc.
 
@@ -72,111 +72,10 @@ Trabalhe metodicamente pelas etapas do ciclo de vida e corrija erros de projeto 
 - o projeto lógico visa uma solução viável para satisfazer todas as consultas conhecidas e em potencial.
 - o projeto físico é para otimizar o desempenho para consultas e atualizações conhecidas e projetadas.
 
-# Exercícios
+# [Fazer a lista de exercícios](https://github.com/tmenegaz/db_dendezeiros/blob/master/assunto/exercicios1.md#exercícios)
 
-1. Pesquise a fim de conhecer e determinar o que é banco de dados *hierárquico*, *rede*, *relacional*, *objeto-relacional* e *objeto*.
+[Próxima aula -> a visita técnica](https://github.com/tmenegaz/db_dendezeiros/blob/master/assunto/visitaTecnica.md#visita-técnica)
 
-- *Hierárquico*: um gerenciador desse tipo representa dados como uma estrutura em árvore, composto de hierarquia e registros
-    - exemplo:
-    
-   ![Gerenciador hierárquico](img/gerenciadorHierarquico.png "Gerenciador hierárquico")
-
-Neste caso, há dados específicos em CLIENTE(nome, endereço, cidade, estado etc); os segmentos dependentes de cliente são CHEKCONTA e GRAVACONTA, que tem cada um, conforme a imagem, dois segmentos. Cada um dos segmentos inferiores dependem hierarquicamente dos segmentos superiores. E para elém disso, cada um tem dados específicos. É comum encontar esse gerenciador em ambientes de grande porte, como implementações *IMS<sup>[10](#myfootnote10)</sup>*
-
-- *Rede*: representa osdados como registros vinculados uns aos outros, formando conjuntos comuns de dados. Existe uma similaridade muito grande o modelo hierárquico e o modelo de rede. Pode-se enteder o modelo de rede como uma generalização do modelo hierárquico. no modelo de rede um *filho* pode ter mais de um *pai*.
-    - exemplo
-
-   ![Gerenciador de rede](img/gerenciadorRede.png "Gerenciador de rede")
-
-- *Relacional*: representa osdados com uma simples coleção de linhas e colunas em tabelas bidimensionais.
-    - exemplo
-
-    ![Gerenciador relacional](img/gerenciadorRelacional.png "Gerenciador relacional")
-
-- *Objeto-Relacional*: Combina o modelo orientado a objetos (*união de propriedades e métodos*) com o modelo relacional(linhas e colunas de tabelas).
-
-- *Objeto*: representa os dados e processos em um único objeto
-    - exemplo
-
-    ![Gerenciador de objeto](img/gerenciadorObjeto.png "Gerenciador de objeto")
-
-2. O que é uma entidade na abordagem relacional?
-
-> A entidade é um *agrupamento lógico de informações inter-relacionadas* necessárias para a execução das atividades do sistema. Pensando no cilco de vida a entidade é um objeto do mundo real na elicitação dos requisitos: funcionário, cliente, produto, etc. Mas quando não for, contém informações relevantes às operações da empresa.
->
-> Quando transportada ao *modelo físico* chamamos a entidade de tabela.
->
-> Ao transpor do modelo Relacional para o modelo Orientado a Objeto, a *entidade* passa a ser uma *classe* ou *categoria* do objeto ao qual acregaremos os respectivos métodos.
-
-3. Dê exemplos de entidades.
-
-> Como exemplo podemos ter para Pessoa Física ou Jurídica as entidades: Pessoa, Funcionário, Clientes, Fornecedores, Empresa.
->
->Para documentos pode-se ter como exemplo: Ordem de compra, Pedido, Nota fiscal  
-
-4. Classifique as entidades.
-
-> As entidades pode ser classificadas em *fundamental* e *associativa*.
->
-> - fundamental:  contem dados básicos que são resultados ou alimentadores das operações da empresa
->
-> - associativa: é formada pelo relacionamento de duas entidades fundamentais sempre que esta se relacionarem mais de uma vez: aluno X matéria; cd X autor; pedido X produto. É importante dizer que há um caso *específico* para a entidade associativa: *sempre que, além do simples relacionamento entre duas entidades fundamentais, houver outras informações específicas da nova entidade criada (quantidade e valor entre pedido e produto) ela será chamada de entidade associativa atributiva*.
-
-5. O que é um atributo na abordagem relacional?
-
-> O atributo é o *item de dado* que qulifica uma entidade descreve seus elementos ou características. Quando evolui-se para o projeto físico do modelo chamamos o atributo de campo ou coluna.
-
-6. Exemplifique atributos.
-
-> Exemplo de atributos para uma entidade Pessoa: nome, sobrenome, endereço, RG, CPF.
->
-> Exemplo para entidade Nota fiscal: série, número, data de emissão, cliente, valor.
-
-7. O que é uma tupla na abordagem relacional?
-
-> A tupla é uma estrutura de atributos que residem em uma entidade.
->
-> Quando transposta para o modelo físico uma tupla é chamada deregistro ou linha da tabela (entidade).
-
-8. Qual a diferenção entre dado e informação?
-
-> O dado é a unidade básica da informação e a informação é um conjunto de dados organizados logicamente a fim de gerar sentido.
-
-9. O que é SGBD?
-
-10. Apresente 3 exemplos de SGBD e suas principais características.
-
-11. Em TI, por que é importante o descolamento ou desacoplamento?
-
-> O desacoplamento é a *separação de responsabilidades*. Segundo Robert C. Martin, nos ensina, deve-se desenvolver software sobre a regra da *responsabilidade única*. Essa coesão deve ser realizada por uma classe de maneira satisfatória. Dessa forma, fica fácil desacoplar ou descolar uma parte da aplicação sem comprometer as demais.
-
-12. O que é independência de dados?
-
-> Quando se prima pela *independência de dados* em um projeto de banco de dados, está a se previnir com relação a futuras necessidades de reorganização e conversão do banco de dados. Posto isso, fica evidente a utilização da regra da responsabilidade única no projeto. Então, a *independência de dados* é a capacidade de fazer mudanças em uma estrutura lógica ou física de banco de dados sem exigir reprogramação dos programas de aplicação.
-
-13. O que é uma chave?
-
-> A chave é um atributo utilizado para indexar dados. São 3 os tipos de chave:
->
-> - chave primária - é o atributo que permite identificar a ocorrência de uma única tupla (linha) em uma entidade. Os demais atributos, da entidade, devem depender unicamente desse atributo chave.  Eventualmente a chave pode ser determinada pela união de um atributo com outro atributo ou mais. Nesses casos a chave será chamada de chave concatenada.
->  
-> - chave estrangeira - é o atributo chave de uma entidade que estabelece a relação de uma entidade com a chave primária de outra entidade. Sendo assim, permitindo a relação entre entidades.
->
-> - chave secundária - Sempre que houver a necessidade de buscar informaçãoes semelhantes, em ordem crescente ou não, em função de data, valores ou status predefinidos, cria-se chaves secundárias. Essas chaves também podem ser concatenadas a outras chaves secundárias pra extrair a informação desejada. Portanto, a chave secundária é utilizada como meio de classificar e pesquisar nas entidades.
-
-14. Para que serve a linguagem SQL?
-
-15. O que é GRANT e REVOKE em DCL?  
-
-16. Qual a diferença entre sistema de banco de dados e sistema de gerenciados de banco de dados?
-
-17. Faça um diagrama que ilustre a resposta da questão 16.
-
-18. Por que a linguagem SQL não é considerada uma linguagem procedural?
-
-19. Como instalar um SGBD em um sistema operacional?
-
-20. O que é clustering?
 
 [Voltar ao topo (Conceitos)](#conceitos)
 
@@ -199,3 +98,6 @@ Neste caso, há dados específicos em CLIENTE(nome, endereço, cidade, estado et
 <a name="myfootnote9">9.</a> representa a dependência entre elementos de dados que são identificadores exclusivos.
 
 <a name="myfootnote10">10.</a> [IMS](https://www.ibm.com/support/knowledgecenter/pt-br/SSKM8N_7.0.0/com.ibm.etools.mft.doc/ac66140_.htm) 
+
+
+[Localize-se: lista das aulas](https://github.com/tmenegaz/db_dendezeiros/blob/master/assunto/lista.md#lista-de-aulas)
